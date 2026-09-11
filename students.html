@@ -1,0 +1,155 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Students & Research Scholars | Dr. Srinivasan A</title><link rel="stylesheet" href="style.css"><style>
+.student-hero{padding:78px 0 58px;background:#f6f8fb;border-bottom:1px solid var(--line)}.student-hero h1{font-size:clamp(42px,6vw,70px);margin:12px 0}.student-hero p{max-width:760px;color:var(--muted);font-size:17px}.student-toolbar{padding:45px 0}.student-search{width:100%;padding:15px 17px;border:1px solid #d7dce2;border-radius:9px;font:inherit}.student-filters{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.student-filter{border:1px solid #d7dce2;background:#fff;padding:8px 14px;border-radius:999px;font-size:12px;font-weight:700;cursor:pointer}.student-filter.active,.student-filter:hover{background:var(--ink);color:#fff}.student-count{color:var(--muted);font-size:13px;margin:16px 0 22px}.student-section-title{margin-top:40px;border-bottom:1px solid var(--line);padding-bottom:15px}.student-section-title h2{font-size:32px;margin:0}.student-section-title p{color:var(--muted);font-size:13px}.student-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:28px 0}.student-card{border:1px solid var(--line);border-radius:14px;padding:24px;background:#fff}.avatar{width:58px;height:58px;border-radius:50%;background:#eaf1ff;color:#1769ff;display:flex;align-items:center;justify-content:center;font:700 16px "Space Grotesk";margin-bottom:18px;overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover}.status{font-size:10px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--blue)}.student-card h3{font-size:20px;margin:8px 0}.student-card .program{font-size:12px;font-weight:700;color:#475467}.student-card p{font-size:13px;color:var(--muted);margin:7px 0}.student-empty{display:none;padding:40px;text-align:center;color:var(--muted)}@media(max-width:800px){.student-grid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.student-grid{grid-template-columns:1fr}}
+
+/* Individual student cards */
+.student-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+  padding:28px 0 36px;
+  align-items:stretch;
+}
+.student-card{
+  box-sizing:border-box;
+  min-height:360px;
+  height:100%;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:22px;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.student-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 28px rgba(16,24,40,.08);
+}
+.avatar{
+  width:96px;
+  height:96px;
+  flex:0 0 96px;
+  border-radius:12px;
+  margin:0 auto 16px;
+  overflow:hidden;
+}
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.student-card .status,
+.student-card h3,
+.student-card .program{
+  text-align:center;
+}
+.student-card h3{margin:8px 0 5px}
+.student-card .program{margin-bottom:8px}
+.student-card p{line-height:1.5}
+@media(max-width:900px){
+  .student-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+  .student-grid{grid-template-columns:1fr}
+  .student-card{min-height:0}
+}
+
+/* Current Scholars and Alumni: same 3-column card layout */
+.student-section-title + .student-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+  align-items:stretch;
+}
+.student-section-title + .student-grid .student-card{
+  width:100%;
+  min-width:0;
+}
+@media(max-width:900px){
+  .student-section-title + .student-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media(max-width:560px){
+  .student-section-title + .student-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* Equal-size individual cards for Current Students and Alumni */
+.student-grid,
+.alumni-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:18px !important;
+  width:100%;
+  padding:28px 0 36px;
+  align-items:stretch;
+}
+.student-grid .student-card,
+.alumni-grid .student-card{
+  width:100% !important;
+  min-width:0;
+  min-height:360px;
+  box-sizing:border-box;
+}
+@media(max-width:900px){
+  .student-grid,.alumni-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+@media(max-width:560px){
+  .student-grid,.alumni-grid{
+    grid-template-columns:1fr !important;
+  }
+  .student-grid .student-card,.alumni-grid .student-card{
+    min-height:0;
+  }
+}
+</style></head><body><header><div class="container nav"><a class="brand" href="index.html">Srinivasan <b>A.</b></a><button class="menu">☰</button><nav>
+<a href="index.html">Home</a><a href="index.html#about">About</a><a href="index.html#research">Research</a><a href="projects.html">Projects</a><a href="publications.html">Publications</a><a href="students.html">Students</a><a href="project-outcomes.html">Project Outcomes</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a>
+</nav></div></header>
+<section class="student-hero"><div class="container"><div class="label">STUDENTS & RESEARCH GROUP</div><h1>Students & scholars.</h1><p>Current research scholars and alumni, with programme, research topic, supervision details and professional position.</p><a class="btn outline" href="index.html">← Back to home</a></div></section>
+<section class="student-toolbar"><div class="container"><input id="studentSearch" class="student-search" placeholder="Search by name, research topic, programme, year or organization..."><div class="student-filters"><button class="student-filter active" data-filter="all">All</button><button class="student-filter" data-filter="phd-current">Current Ph.D.</button><button class="student-filter" data-filter="mtech-current">Current M.Tech</button><button class="student-filter" data-filter="phd-alumni">Ph.D. Alumni</button><button class="student-filter" data-filter="mtech-alumni">M.Tech Alumni</button><button class="student-filter" data-filter="other-alumni">Other Alumni</button></div><div id="studentCount" class="student-count"></div>
+<div class="student-section-title"><h2>Current Students</h2><p>Current scholars</p></div>
+<div class="student-grid">
+<article class="student-card" data-category="phd-current" data-search="Soma Banerjee phd 2021-2026 abcd dr.surja kanta pal  CSIR-CMERI, Durgapur, India"><div class="avatar"><img src="images/soma.jpg" alt="Soma Banerjee"></div><span class="status">Current · Phd</span><h3>Soma Banerjee</h3><div class="program">Phd · 2021-2026</div><p><b>Research topic:</b> “Machine Learning based Process Automation in Wire Arc Additive Manufacturing
+(WAAM)”</p><p><b>Co-supervisor:</b> Prof. Surja Kanta Pal, IIT Kharagpur</p><p><b>Present position:</b>Technical Officer</p><p><b>Organization:</b> CSIR-CMERI, Durgapur, India</p></article>
+<article class="student-card" data-category="phd-current" data-search="Sabbir Reza Trafdar phd 2020-2026 abcd dr.ranjit ray Dr. BC Roy College, Durgapur, India"><div class="avatar"><img src="images/sabbir.jpg" alt="Soma Banerjee"></div><span class="status">Current · Phd</span><h3>Sabbir Reza Tarafdar</h3><div class="program">Phd · 2020-2026</div><p><b>Research topic:</b> “Studies And Analysis On Brain MR-Images For Neurodegenerative Disease Identification And Classification”</p><p><b>Co-supervisor: </b> Dr. Ranjit Ray, Chief Scientist, CSIR-CMERI, Durgapur, India</p><p><b>Present position:</b>Assistant Professor</p><p><b>Organization:</b> Dr. B C Roy Engineering College,Durgapur, India</p></article>
+<article class="student-card" data-category="mtech-current" data-search="anisom chakraborty mtech 2021-2023 abcd dr. siva ram krishna vadali research student cnrs-lirmm, france"><div class="avatar"><img src="images/anisom.jpg" alt="Anisom Chakraborty"></div><span class="status">Current · MTech</span><h3>Anisom Chakraborty</h3><div class="program">MTech · 2022-2024</div><p><b>Research topic:</b> Next-Gen Elderly Care: Harnessing Potential of AI for Movement and speech Anomaly Detection</p><p><b>Co-supervisor:</b> Dr. Siva Ram Krishna Vadali</p><p><b>Present position:</b> Research Student</p><p><b>Organization:</b> CNRS-LIRMM, France</p></article>
+</div>
+
+<div class="student-section-title"><h2>Alumni</h2><p>Completed scholars and former research students</p></div>
+<div class="student-grid alumni-grid">
+<article class="student-card" data-category="phd-alumni" data-search="debeshi dutta phd 2018-2023 abcd  scientist cmit-bengaluru"><div class="avatar"><img src="images/debeshi.jpg" alt="Debeshi Dutta"></div><span class="status"> Phd</span><h3>Dr. Debeshi Dutta</h3><div class="program">Phd · 2018-2023</div><p><b>Research topic:</b>Assessment of Grasp Ability of Stroke Survivors: a machine learning based approach</p><p><b>Supervisor:  </b>Dr. Soumen Sen, Chief Scientist, CSIR-CMERI, Durgapur, India</p><p><b>Present position:</b> Scientist</p><p><b>Organization:</b> CMIT-Bengaluru</p></article>
+
+<article class="student-card" data-category="mtech-alumni" data-search="Mainak chakraborty mtech 2020"><div class="avatar"><img src="images/mainak.jpeg" alt="Mainak Chakraborty"></div><span class="status">Current · MTech</span><h3>Mainak Chakraborty</h3><div class="program">MTech · 2022-2024</div><p><b>Research topic:</b> Human Movement Classification using Seismic Signals </p><p><b>Institute</b>:IIEST, Shipur</p><p><b>Present position:</b> Research Student</p><p><b>Organization:</b> IIT Delhi</p></article>
+
+<article class="student-card" data-category="other-alumni" data-search="ankit verma indian science academcy summer research fellow 2017-2018 abcd  verification engineer texas instrument, bengaluru"><div class="avatar"><img src="images/ankit_verma.jpg" alt="Ankit Verma"></div><span class="status">Indian Science Academcy Summer Research Fellow</span><h3>Mr.Ankit Verma</h3><div class="program">Indian Science Academcy Summer Research Fellow · 2017-2018</div><p><b>Research topic:</b>Automated Intrusion Detection System for Border Security</p><p><b>Institute:</b> MANIT Bhopal, IISC, Bengaluru</p><p><b>Present position:</b> Verification Engineer</p><p><b>Organization:</b> Texas Instrument, Bengaluru</p></article>
+<article class="student-card" data-category="other-alumni" data-search="nanditha indian science academcy summer research fellow 2016-2017 abcd  software architect engineer the walt disney company"><div class="avatar"><img src="images/madukar.jpg" alt="Madhukar Bhat"></div><span class="status">Indian Science Academcy Summer Research Fellow</span><h3>Dr. Madhukar Bhat</h3><div class="program">Indian Science Academcy Summer Research Fellow · 2016-2017</div><p><b>Research topic:</b>Detection of Optic Disc in diabetic Retinopathy and Glaucoma Images using Image Processing Techniques by Programming DSP Boards</p><p><b></b> RV college of engineering, RWTH Aachen University, Nates Universite</p><p><b>Present position:</b> Software Architect Engineer</p><p><b>Organization:</b> The Walt Disney Company</p></article>
+<article class="student-card" data-category="other-alumni" data-search="madhukar bhat indian science academcy summer research fellow 2016-2017 abcd  software architect engineer the walt disney company"><div class="avatar"><img src="images/nanditha.jpg" alt="Nanditha Nandanavanam"></div><span class="status"> Indian Science Academcy Summer Research Fellow</span><h3>Ms.Nanditha Nandanavanam </h3><div class="program">Indian Science Academcy Summer Research Fellow · 2016-2017</div><p><b>Research topic: </b> Image Feature Extraction Through Different Fractal Analysis And Statistical Methods</p><p><b></b>Institute:NMAMIT, State University of New York, Buffalo</p><p><b>Present position:</b>  Product Owner</p><p><b>Organization:</b>Spectrum Communications, St Louis, Missouri , USA</p></article>
+<article class="student-card" data-category="other-alumni" data-search="kanishkaa internship 2023-2025 underwater sonar"><div class="avatar"><img src="images/kanishkaa.jpg" alt="kanishkaa mohan"></div><span class="status">Internship student</span><h3>Ms.Kaniskaa Mohan Sangeetha</h3><div class="program">Institute Instership Student · 2023-2024</div><p><b>Research topic:</b>Underwater Sonar Image Target Identification</p><p><b>Co-supervisor:</b> PSGiTech, Coimbatore, Cornell University, USA </p><p><b>Present position:</b>Junior Planner</p><p><b>Organization:</b> Modeling @ SCAG, Los Angeles , USA </p></article>
+<article class="student-card" data-category="other-alumni" data-search="Surya prasath internship 2023-2025 underwater sonar"><div class="avatar"><img src="images/Surya.jpeg" alt="kanishkaa mohan"></div><span class="status">Internship student</span><h3>Mr. Surya Prasath S K</h3><div class="program">Institute Instership Student · 2024-2025</div><p><b>Research topic:</b>Underwater Sonar Image Target Identification for Homing and Docking</p><p><b>Institute:</b> Kongu Engineering Collge, University of Leeds </p><p><b>Present position:</b>Master Student</p><p><b>Organization:</b>University of Leeds, United Kingdem </p></article>
+<article class="student-card" data-category="other-alumni" data-search="Suruchi Summer Research Instership"><div class="avatar"><img src="images/suruchi.jpg" alt="Suruchi Adhikary"></div><span class="status">Internship student</span><h3>Ms.Suruchi Adhikary</h3><div class="program">Summer Instership Student · 2022</div><p><b>Research topic:</b>Seismic Sensor based Person Activity Identification</p><p><b>Institute:</b> Dr.B.C.Roy Engineering College </p><p><b>Present position:</b>Azure Data Engineer</p><p><b>Organization:</b> Capgemini Technology Services, Mumbai </p></article>
+<article class="student-card" data-category="other-alumni" data-search="Manjush indian science academcy summer research fellow"><div class="avatar"><img src="images/manjush.jpeg" alt="Manjush"></div><span class="status">Indian Science Academcy Summer Research Fellow</span><h3>Mr.Manjush K</h3><div class="program">Indian Science Academcy Summer Research Fellow · 2024</div><p><b>Research topic:</b>Human Fall Prediction using Seismic Sensor and Machine Learning</p><p><b>Institute:</b> National Institute of Technology Karnataka Suratkal </p><p><b>Present position:</b> Associate Engineer</p><p><b>Organization:</b> Eaton, Pune </p></article>
+<article class="student-card" data-category="other-alumni" data-search="Kulsoom Masood indian science academcy summer research fellow"><div class="avatar"><img src="images/Kulsoom.jpg" alt="Kulsoom Masood"></div><span class="status">Indian Science Academcy Summer Research Fellow</span><h3>Ms.Kulsood Masood</h3><div class="program">Indian Science Academcy Summer Research Fellow · 2024</div><p><b>Research topic:</b>Underwater Image enhancement for Homing and Docking Applications </p><p><b>Co-Supervisor:</b> Dr. Siva Ram Krishna Vadali</p><p><b>Present position:</b>  Business Analyst</p><p><b>Organization:</b>Cloud Ingenious, Noida </p></article>
+<article class="student-card" data-category="other-alumni" data-search=" Sakshi Ekka indian science academcy summer research fellow"><div class="avatar"><img src="images/sakshi ekka.jpg" alt="Sakshi Ekka"></div><span class="status"> Indian Science Academcy Summer Research Fellow </span><h3>Ms.Sakshi Ekka</h3><div class="program">Indian Science Academcy Summer Research Fellow · 2023</div><p><b>Research topic:</b>Human Fall Prediction using Seismic Sensor and Machine Learning </p><p><b>Institute:</b>Indian Institute of Information Technology, Ranchi</p><p><b>Present position:</b>MTech Student</p><p><b>Organization:</b>Motilal Nehru National Institute of Technology, Allahabad</p></article>
+<article class="student-card" data-category="other-alumni" data-search=" Piyush Tewari indian science academcy summer research fellow"><div class="avatar"><img src="images/piyush_tiwari.jpg" alt="Piyush Tewari"></div><span class="status">Indian Science Academcy Summer Research Fellow</span><h3>Mr.Piyush Tewari</h3><div class="program">Indian Science Academcy Summer Research Fellow · 2024</div><p><b>Research topic:</b>Autonomous Underwater Vehicle Homing and Docking </p><p><b>Institute:</b>Indian Institute of Technology, Patna</p><p><b>Present position:</b>Verification Engineer-I</p><p><b>Organization:</b> Cadence Design Systems, Noida</p></article>
+<article class="student-card" data-category="JRF" data-search=" Ankit Mallick Junior research fellow"><div class="avatar"><img src="images/ankit_mallick.jpg" alt="Ankit Mallick"></div><span class="status">Junior Research Fellow (DRDO Project)</span><h3>Mr.Ankit Mallick</h3><div class="program"> Junior Research Fellow ·2019-2021</div><p><b>Research topic:</b> Hardware Design and programming for Perimeter Surveillance</p><p><b>Institute:</b>Manipal Institute of Technology</p><p><b>Present position:</b>Senior Hardware Architect</p><p><b>Organization:</b> Anthriq Location: Bengaluru</p></article>
+<article class="student-card" data-category="JRF" data-search=" Manisha Das Junior research fellow"><div class="avatar"><img src="images/Manisha Das.jpg" alt="Manisha Das"></div><span class="status">Junior Research Fellow (DRDO Project)</span><h3>Ms. Manisha Das</h3><div class="program"> Junior Research Fellow ·2019-2021</div><p><b>Research topic:</b> Software Design for Perimeter Surveillance</p><p><b>Institute:</b>Bengal College of Engineering</p><p><b>Present position:</b>Software Architect</p><p><b>Organization:</b> Indian Railways, New Delhi</p></article>
+<article class="student-card" data-category="other-alumni" data-search="  Aashay Raj indian science academcy summer research fellow"><div class="avatar"><img src="images/ alt="Aashay Raj"></div><span class="status">Indian Science Academcy Summer Research Fellow</span><h3>Mr. Aashay Raj</h3><div class="program">Indian Science Academcy Summer Research Fellow · 2024-2025</div><p><b>Research topic:</b>Seismic Sensor Based Activity Detection </p><p><b>Institute:</b>National Institute of Technology Kurukshetra</p><p><b>Present position:</b>Software Engineer</p><p><b>Organization:</b>Bengaluru</p></article>
+<article class="student-card" data-category="other-alumni" data-search="  Mounya indian science academcy summer research fellow"><div class="avatar"><img src="images/ alt="Mounya"></div><span class="status">Indian Science Academcy Summer Research Fellow</span><h3>Ms. Mounya Veeramachaneni</h3><div class="program">Indian Science Academcy Summer Research Fellow · 2018-2019</div><p><b>Research topic:</b>Alzeimers Disese prediction using MRI and Machine Learning </p><p><b>Institute:</b> IIIT Bhubaneswar</p><p><b>Present position:</b>Data Scientist 2</p><p><b>Organization:Amazon</b>Luxembourg</p></article>
+<article class="student-card" data-category="other-alumni" data-search="  Nayab indian science academcy summer research fellow"><div class="avatar"><img src="images/Nayab.jpg "alt=Nayab"></div><span class="status">Indian Science Academcy Summer Research Fellow</span><h3>Mr. Nayab Guhur</h3><div class="program">Indian Science Academcy Summer Research Fellow · 2026</div><p><b>Research topic:</b>Post Stroke Rehabilitaion using fusion of vision and audio</p><p><b>Institute:</b>HIT Haldia</p><p><b>Present position:</b>BTech Student</p><p><b>Organization:HIT</b>Haldia</p></article>
+
+
+
+
+
+
+</div>
+</div></section><footer><div class="container foot"><span>© <span id="y"></span> Dr. Srinivasan A.</span><span>NIT Puducherry · CSE</span></div></footer>
+<script src="script.js"></script><script>
+const si=document.getElementById('studentSearch'),sb=[...document.querySelectorAll('.student-filter')],sc=[...document.querySelectorAll('.student-card')],cnt=document.getElementById('studentCount'),emp=document.getElementById('studentEmpty');let sf='all';
+function render(){let q=si.value.toLowerCase().trim(),n=0;sc.forEach(c=>{let ok=(sf==='all'||c.dataset.category===sf)&&(!q||c.dataset.search.includes(q)||c.innerText.toLowerCase().includes(q));c.style.display=ok?'block':'none';if(ok)n++});cnt.textContent=n+' student'+(n===1?'':'s')+' shown';emp.style.display=n?'none':'block'}sb.forEach(b=>b.onclick=()=>{sb.forEach(x=>x.classList.remove('active'));b.classList.add('active');sf=b.dataset.filter;render()});si.oninput=render;render();
+</script></body></html>
